@@ -6,6 +6,8 @@ import { AllIdeasPage } from './pages/AllIdeasPage/index';
 // благодаря этому внутри страничек будут доступны Trpc-функции
 export const App = () => {
 	return (
-		<TrpcProvider><AllIdeasPage /></TrpcProvider>
+		<TrpcProvider>
+			<AllIdeasPage />
+		</TrpcProvider>
 	);
 }
