@@ -3,7 +3,8 @@ import type { TrpcRouter } from "@fullstackstepik/backend/src/trpc";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 
-const trpc = createTRPCReact<TrpcRouter>();
+export const trpc = createTRPCReact<TrpcRouter>();
+
 
 // клиент react-query документация: https://tanstack.com/query/latest
 // управляет логикой запросов(не типами) 
@@ -28,7 +29,9 @@ const trpcClient = trpc.createClient({
 // у trpc есть свой Provider, он должен знать о trpcClient и queryClient
 // а также для работы QueryClientProvider react-query нам нужно передать queryClient
 export const TrpcProvider = ({ children }: { children: React.ReactNode }) => {
-	return (<trpc.Provider client={trpcClient} queryClient={queryClient}>
-		<QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-	</trpc.Provider>);
-}
+	return (
+		<trpc.Provider client={trpcClient} queryClient={queryClient}>
+			<QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+		</trpc.Provider>
+	);
+};
