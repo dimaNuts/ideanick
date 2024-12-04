@@ -2,8 +2,16 @@
 	"name": "fullstackstepik",
 	"private": true,
 	"version": "0.0.0",
-
+	"scripts": {
+		"b": "pnpm --filter @fullstackstepik/backend",
+		"w": "pnpm --filter @fullstackstepik/webapp",
+		"types": "concurrently \"pnpm b types\" \"pnpm w types\""
+	},
 	"devDependencies": {
+		"concurrently": "^9.1.0",
+		"rimraf": "^6.0.1",
+		"ts-node": "^10.9.2",
+		"ts-node-dev": "^2.0.0",
 		"typescript": "^5.7.2"
 	}
 }
