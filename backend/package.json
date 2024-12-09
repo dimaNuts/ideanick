@@ -6,6 +6,7 @@
     "dev": "ts-node-dev --rs ./src/index.ts",
     "build": "rimraf ./dist && tsc --build ./tsconfig.json",
     "start": "node ./dist/index.js",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/.eslintcache --ext .ts .",
     "prettify": "prettier --cache --write '{src/**/*,*}.{ts,tsx,js,json,yml,scss}'",
     "types": "tsc --noEmit --project ./tsconfig.json"
   },

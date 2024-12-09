@@ -5,12 +5,13 @@
 	"scripts": {
 		"b": "pnpm --filter @ideaproject/backend",
 		"w": "pnpm --filter @ideaproject/webapp",
+		"lint": "concurrently \"pnpm b lint\" \"pnpm w lint\"",
 		"types": "concurrently \"pnpm b types\" \"pnpm w types\""
 	},
 	"devDependencies": {
 		"concurrently": "^9.1.0",
-		"eslint": "^8.47.0",
-		"eslint-config-prettier": "^9.0.0",
+		"eslint": "^8.57.1",
+		"eslint-config-prettier": "^9.1.0",
 		"eslint-config-react-app": "^7.0.1",
 		"eslint-config-standard-with-typescript": "^37.0.0",
 		"prettier": "^3.4.2",
