@@ -1,5 +1,6 @@
 import { initTRPC } from '@trpc/server'
 
+
 const ideas = [
   {
     nick: 'cool-nick-idea-1',

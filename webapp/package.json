@@ -1,5 +1,5 @@
 {
-  "name": "@fullstackstepik/webapp",
+  "name": "@ideaproject/webapp",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,7 +12,7 @@
     "prettify": "prettier --loglevel --cache --write '{src/**/*,*}.{ts,tsx,js,json,yml,scss}'"
   },
   "dependencies": {
-    "@fullstackstepik/backend": "workspace:*",
+    "@ideaproject/backend": "workspace:*",
     "@tanstack/react-query": "^4.36.1",
     "@trpc/client": "^10.45.2",
     "@trpc/react-query": "^10.45.2",

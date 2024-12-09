@@ -1,5 +1,5 @@
 {
-  "name": "@fullstackstepik/backend",
+  "name": "@ideaproject/backend",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -17,7 +17,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.10.1",
-    "prettier": "^3.4.2"
+    "@types/node": "^22.10.1"
+    
   }
 }
