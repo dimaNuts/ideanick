@@ -27,10 +27,7 @@ const ideas = [
     descriotion: 'Idea5 description...',
   },
 ]
-const x: number = 1
-if (x) {
-  console.info()
-}
+
 const trpc = initTRPC.create()
 
 export const trpcRouter = trpc.router({
