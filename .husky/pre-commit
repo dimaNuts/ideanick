@@ -1,2 +1,2 @@
-pnpm test
 pnpm types
+pnpm lint
