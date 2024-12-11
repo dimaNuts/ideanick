@@ -29,7 +29,7 @@ const ideas = [
   },
 ]
 const x: string = 'hello'
-console.info(x)
+if (true) console.info(x)
 const trpc = initTRPC.create()
 
 export const trpcRouter = trpc.router({
