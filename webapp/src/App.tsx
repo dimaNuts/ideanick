@@ -6,6 +6,7 @@ import { ViewIdeaPage } from './pages/ViewIdeaPage'
 
 // передаем все страницы внутрь TrpcProvider,
 // благодаря этому внутри страничек будут доступны Trpc-функции
+// React Router — это инструмент для создания многостраничных приложений
 export const App = () => {
   return (
     <TrpcProvider>

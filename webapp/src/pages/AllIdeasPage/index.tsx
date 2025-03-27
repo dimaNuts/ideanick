@@ -12,7 +12,9 @@ export const AllIdeasPage = () => {
   if (isError) {
     return <span>Error: {error.message}</span>
   }
-
+  // LINK позволит сделать заголовки ссылками и перейти на стр. свойсто to={эндпоинт}
+  // ideaNick: idea.nick  использ map() получаем эндпоинт из список идей, также назв идеи
+  // заголовка-ссылки
   return (
     <div>
       <h1>All Ideas</h1>
