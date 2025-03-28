@@ -7,7 +7,7 @@
     "w": "pnpm --filter @ideaproject/webapp",
     "lint": "concurrently \"pnpm b lint\" \"pnpm w lint\"",
     "types": "concurrently \"pnpm b types\" \"pnpm w types\"",
-    "prepare": "husky init"
+    "prepare": "husky"
   },
   "devDependencies": {
     "concurrently": "^9.1.0",

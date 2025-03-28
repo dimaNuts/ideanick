@@ -24,7 +24,7 @@ export const AllIdeasPage = () => {
             <h2>
               <Link to={getViewIdeaRoute({ ideaNick: idea.nick })}>{idea.name}</Link>
             </h2>
-            <p>{idea.descriotion}</p>
+            <p>{idea.description}</p>
           </div>
         )
       })}
