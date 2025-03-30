@@ -1,5 +1,6 @@
 import { initTRPC } from '@trpc/server'
 import _ from 'lodash'
+import { z } from 'zod'
 
 const ideas = _.times(10, (i) => ({
   nick: `cool-nick-idea-${i}`,
@@ -16,6 +17,17 @@ export const trpcRouter = trpc.router({
     // throw new Error('Test error')
     return { ideas: ideas.map((idea) => _.pick(idea, ['nick', 'name', 'description'])) }
   }),
+  // новый роутер получение идеи с бэка
+  getIdea: trpc.procedure
+    .input(
+      z.object({
+        ideaNick: z.string(),
+      })
+    )
+    .query(({ input }) => {
+      const idea = ideas.find((idea) => idea.nick === input.ideaNick)
+      return { idea: idea || null }
+    }),
 })
 
 export type TrpcRouter = typeof trpcRouter
