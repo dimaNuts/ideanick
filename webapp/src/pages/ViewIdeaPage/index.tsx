@@ -4,7 +4,7 @@ import { trpc } from '../../lib/trpc'
 
 export const ViewIdeaPage = () => {
   const { ideaNick } = useParams() as ViewIdeaRouteParams
-
+  // получаем страницу идеи с бэкенда
   const { data, error, isLoading, isFetching, isError } = trpc.getIdea.useQuery({
     ideaNick,
   })
