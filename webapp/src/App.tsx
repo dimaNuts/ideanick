@@ -4,6 +4,7 @@ import { getAllIdeasRoute, getViewIdeaRoute, viewIdeaRouteParams } from './lib/r
 import { TrpcProvider } from './lib/trpc'
 import { AllIdeasPage } from './pages/AllIdeasPage/index'
 import { ViewIdeaPage } from './pages/ViewIdeaPage'
+import './styles/global.scss'
 
 // передаем все страницы внутрь TrpcProvider,
 // благодаря этому внутри страничек будут доступны Trpc-функции
