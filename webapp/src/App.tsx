@@ -12,6 +12,8 @@ import './styles/global.scss'
 // благодаря этому внутри страничек будут доступны Trpc-функции
 // React Router — это инструмент для создания многостраничных приложений
 // интегрируем Layout, обварачиваем страницы
+// element={<NewIdeaPage />} добавлен выше element={<ViewIdeaPage />}
+// чтобы запрос для ViewIdeaPage не выдал !data.idea
 export const App = () => {
   return (
     <TrpcProvider>
