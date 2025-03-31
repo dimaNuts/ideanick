@@ -18,3 +18,5 @@ export type ViewIdeaRouteParams = typeof viewIdeaRouteParams
 // для перехода на стр. отдельной идеи
 // при желании можно изменить ideas${ideaNick} на example${ideaNick}
 export const getViewIdeaRoute = ({ ideaNick }: ViewIdeaRouteParams) => `/ideas/${ideaNick}`
+
+export const getNewIdeaRoute = () => `/ideas/new`
