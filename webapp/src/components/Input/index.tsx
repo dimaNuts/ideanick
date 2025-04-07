@@ -1,14 +1,7 @@
-export const Input = ({
-  label,
-  name,
-  state,
-  setState,
-}: {
-  label: string
-  name: string
-  state: Record<string, any>
-  setState: React.Dispatch<React.SetStateAction<any>>
-}) => {
+import { type FormikProps } from 'formik'
+
+export const Input = ({ label, name, formik }: { label: string; name: string; formik: FormikProps<any> }) => {
+  const value = formik.values[name]
   return (
     <div style={{ marginBottom: 10 }}>
       <label htmlFor={name}>{label}</label>
@@ -16,9 +9,9 @@ export const Input = ({
       <input
         type="text"
         onChange={(e) => {
-          setState({ ...state, [name]: e.target.value })
+          void formik.setFieldValue(name, e.target.value)
         }}
-        value={state[name]}
+        value={value}
         name={name}
         id={name}
       />
