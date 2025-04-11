@@ -1,4 +1,3 @@
-//
 import { ideas } from '../../lib/ideas'
 import { trpc } from '../../lib/trpc'
 import { zCreateIdeaTrpcInput } from './input'
