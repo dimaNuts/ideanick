@@ -2,6 +2,7 @@ import { zCreateIdeaTrpcInput } from '@ideaproject/backend/src/router/createIdea
 import { useFormik } from 'formik'
 import { withZodSchema } from 'formik-validator-zod'
 import { useState } from 'react'
+import { Alert } from '../../components/Alert/index'
 import { Input } from '../../components/Input'
 import { Segment } from '../../components/Segment'
 import { Textarea } from '../../components/Textare'
@@ -52,8 +53,8 @@ export const NewIdeaPage = () => {
         <Textarea name="text" label="Text" formik={formik} />
 
         {!formik.isValid && !!formik.submitCount && <div style={{ color: 'red' }}>Some fields are invalid</div>}
-        {!!submittingError && <div style={{ color: 'red' }}>{submittingError}</div>}
-        {successMesageVisible && <div style={{ color: 'green' }}>Idea created!</div>}
+        {!!submittingError && <Alert color="red">{submittingError}</Alert>}
+        {successMesageVisible && <Alert color="green">Idea created!</Alert>}
 
         <button type="submit" disabled={formik.isSubmitting}>
           {formik.isSubmitting ? 'Submitting...' : 'Create Idea'}
