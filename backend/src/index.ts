@@ -15,7 +15,7 @@ void (async () => {
       res.send('pong')
     })
 
-    applyTrpcToExpressApp(expressApp, trpcRouter)
+    applyTrpcToExpressApp(expressApp, ctx, trpcRouter)
 
     expressApp.listen(3000, () => {
       console.info('Listening at http://localhost:3000')
