@@ -55,7 +55,7 @@ export const NewIdeaPage = () => {
           <Input name="description" label="Description" formik={formik} maxWidth={500} />
           <Textarea name="text" label="Text" formik={formik} />
 
-          {!formik.isValid && !!formik.submitCount && <div style={{ color: 'red' }}>Some fields are invalid</div>}
+          {!formik.isValid && !!formik.submitCount && <Alert color="red">Some fields are invalid</Alert>}
           {!!submittingError && <Alert color="red">{submittingError}</Alert>}
           {successMesageVisible && <Alert color="green">Idea created!</Alert>}
 
