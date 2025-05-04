@@ -60,7 +60,7 @@ export const SignUpPage = () => {
           <Input name="password" label="Password" formik={formik} type="password" />
           <Input name="passwordAgain" label="Password again" formik={formik} type="password" />
 
-          {!formik.isValid && !!formik.submitCount && <div style={{ color: 'red' }}>Some fields are invalid</div>}
+          {!formik.isValid && !!formik.submitCount && <Alert color="red">Some fields are invalid</Alert>}
           {!!submittingError && <Alert color="red">{submittingError}</Alert>}
           {successMesageVisible && <Alert color="green">thanks for sign up!</Alert>}
 
