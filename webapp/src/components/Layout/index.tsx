@@ -1,5 +1,5 @@
 import { Link, Outlet } from 'react-router-dom'
-import { getAllIdeasRoute, getNewIdeaRoute, getSignUpRoute, getSignInRoute } from '../../lib/routes'
+import { getAllIdeasRoute, getNewIdeaRoute, getSignUpRoute, getSignInRoute, getSignOutRoute } from '../../lib/routes'
 import { trpc } from '../../lib/trpc'
 import css from './index.module.scss'
 
@@ -21,6 +21,11 @@ export const Layout = () => {
               <li className={css.item}>
                 <Link className={css.link} to={getNewIdeaRoute()}>
                   Add Idea
+                </Link>
+              </li>
+              <li className={css.item}>
+                <Link className={css.link} to={getSignOutRoute()}>
+                  Log out ({data.me.nick})
                 </Link>
               </li>
             </>
