@@ -2,14 +2,14 @@ import { trpc } from '../../lib/trpc'
 import { zUpdateIdeaTrpcInput } from './input'
 
 export const updateIdeaTrpcRoute = trpc.procedure.input(zUpdateIdeaTrpcInput).mutation(async ({ ctx, input }) => {
-  const { idIdea, ...ideaInput } = input
+  const { ideaID, ...ideaInput } = input
   if (!ctx.me) {
     throw new Error('UNAUTHORIZED')
   }
 
   const idea = await ctx.prisma.idea.findUnique({
     where: {
-      id: idIdea,
+      id: ideaID,
     },
   })
   if (!idea) {
@@ -30,7 +30,7 @@ export const updateIdeaTrpcRoute = trpc.procedure.input(zUpdateIdeaTrpcInput).mu
   }
   await ctx.prisma.idea.update({
     where: {
-      id: idIdea,
+      id: ideaID,
     },
     data: {
       ...ideaInput,
